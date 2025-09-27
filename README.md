@@ -79,3 +79,4 @@ Open the index.html file in your favorite web browser (e.g., Chrome, Firefox, Ed
 
 That's it! The project is now running locally.
 
+

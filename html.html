@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sasta Finder - Advanced Price Comparison Platform</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body data-theme="light">
+    <!-- Advanced Header -->
+    <header class="advanced-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <div class="logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <div class="logo-text">
+                            <span class="brand-name">Sasta</span>
+                            <span class="brand-finder">Finder</span>
+                        </div>
+                    </div>
+                </div>
+
+                <nav class="advanced-nav">
+                    <ul class="nav-list">
+                        <li><a href="#" class="nav-link active">Home</a></li>
+                        <li><a href="#" class="nav-link">Categories</a></li>
+                        <li><a href="#" class="nav-link">Deals</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Services</a>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Price Alerts</a>
+                                <a href="#" class="dropdown-item">Wishlist</a>
+                                <a href="#" class="dropdown-item">Price History</a>
+                            </div>
+                        </li>
+                        <li><a href="#" class="nav-link">Premium</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <div class="theme-toggle" id="themeToggle">
+                        <div class="theme-slider">
+                            <i class="fas fa-sun sun-icon"></i>
+                            <i class="fas fa-moon moon-icon"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="search-toggle" id="searchToggle">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    
+                    <div class="notification-bell">
+                        <i class="fas fa-bell"></i>
+                        <span class="notification-badge">3</span>
+                    </div>
+                    
+                    <div class="user-menu">
+                        <button class="btn-login">Login</button>
+                        <button class="btn-signup">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Search Bar -->
+            <div class="mobile-search-bar" id="mobileSearchBar">
+                <div class="mobile-search-container">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search products, brands, or categories...">
+                    <button class="mobile-search-btn">Search</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Enhanced Hero Section -->
+    <section class="enhanced-hero-section">
+        <div class="hero-background">
+            <div class="floating-shapes">
+                <div class="shape shape-1"></div>
+                <div class="shape shape-2"></div>
+                <div class="shape shape-3"></div>
+                <div class="shape shape-4"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>Save up to 80% with Smart Comparison</span>
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">Compare Prices</span>
+                    <span class="title-line gradient-text">Across All Platforms</span>
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Discover the best deals on groceries, electronics, fashion & more. 
+                    Get instant price comparisons from 15+ platforms with exclusive cashback rewards.
+                </p>
+                
+                <div class="advanced-search-container">
+                    <div class="search-input-group">
+                        <div class="search-icon">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <input type="text" class="search-input" placeholder="Search for products, brands, or categories..." id="heroSearchInput">
+                        <div class="search-suggestions" id="searchSuggestions">
+                            <!-- Suggestions will be populated by JavaScript -->
+                        </div>
+                        <button class="advanced-search-btn">
+                            <span>Compare Prices</span>
+                            <i class="fas fa-arrow-right"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="search-filters">
+                        <button class="filter-chip active" data-filter="all">All</button>
+                        <button class="filter-chip" data-filter="groceries">Groceries</button>
+                        <button class="filter-chip" data-filter="electronics">Electronics</button>
+                        <button class="filter-chip" data-filter="fashion">Fashion</button>
+                        <button class="filter-chip" data-filter="home">Home & Kitchen</button>
+                    </div>
+                </div>
+                
+                <div class="trust-indicators">
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i class="fas fa-shield-check"></i>
+                        </div>
+                        <div class="trust-text">
+                            <span class="trust-number">100%</span>
+                            <span class="trust-label">Secure</span>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="trust-text">
+                            <span class="trust-number">Real-time</span>
+                            <span class="trust-label">Updates</span>
+                        </div>
+                    </div>
+                    <div class="trust-item">
+                        <div class="trust-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="trust-text">
+                            <span class="trust-number">50K+</span>
+                            <span class="trust-label">Users</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Platform Showcase -->
+    <section class="platform-showcase">
+        <div class="container">
+            <div class="platform-header">
+                <h3>Compare prices from 15+ trusted platforms</h3>
+                <div class="platform-scroll" id="platformScroll">
+                    <div class="platform-item">
+                        <div class="platform-logo">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <span>Blinkit</span>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-logo">
+                            <i class="fas fa-shipping-fast"></i>
+                        </div>
+                        <span>Zepto</span>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-logo">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <span>Instamart</span>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-logo">
+                            <i class="fas fa-shopping-basket"></i>
+                        </div>
+                        <span>BigBasket</span>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-logo">
+                            <i class="fab fa-amazon"></i>
+                        </div>
+                        <span>Amazon</span>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-logo">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <span>Flipkart</span>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-logo">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <span>Myntra</span>
+                    </div>
+                    <div class="platform-item">
+                        <div class="platform-logo">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <span>Swiggy</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Features Section -->
+    <section class="advanced-features-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">Why Choose Us</div>
+                <h2 class="section-title">Advanced Price Intelligence</h2>
+                <p class="section-subtitle">Powered by AI and real-time data to give you the best deals</p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>AI-Powered Recommendations</h3>
+                        <p>Smart algorithms analyze market trends to suggest the perfect time to buy</p>
+                        <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="feature-card featured">
+                    <div class="feature-badge">Most Popular</div>
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Price History Analysis</h3>
+                        <p>Track price trends over time and get alerts when prices drop significantly</p>
+                        <a href="#" class="feature-link">Try Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Real-time Updates</h3>
+                        <p>Get instant notifications when prices change across any platform</p>
+                        <a href="#" class="feature-link">Set Alert <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-coins"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3>Cashback Rewards</h3>
+                        <p>Earn up to 15% cashback on every purchase made through our platform</p>
+                        <a href="#" class="feature-link">Earn Now <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Comparison Dashboard -->
+    <section class="comparison-dashboard">
+        <div class="container">
+            <div class="dashboard-header">
+                <div class="dashboard-title">
+                    <h2>Live Price Comparison</h2>
+                    <p>Compare prices across multiple platforms in real-time</p>
+                </div>
+                
+                <div class="dashboard-controls">
+                    <div class="view-options">
+                        <button class="view-btn active" data-view="grid">
+                            <i class="fas fa-th-large"></i>
+                        </button>
+                        <button class="view-btn" data-view="list">
+                            <i class="fas fa-list"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="sort-dropdown">
+                        <select id="advancedSort" class="sort-select">
+                            <option value="best-price">Best Price</option>
+                            <option value="highest-savings">Highest Savings</option>
+                            <option value="most-popular">Most Popular</option>
+                            <option value="highest-rated">Highest Rated</option>
+                            <option value="newest">Newest</option>
+                        </select>
+                    </div>
+                    
+                    <button class="filter-btn" id="advancedFilters">
+                        <i class="fas fa-sliders-h"></i>
+                        Filters
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Advanced Filter Panel -->
+            <div class="filter-panel" id="filterPanel">
+                <div class="filter-section">
+                    <h4>Price Range</h4>
+                    <div class="range-slider">
+                        <input type="range" id="minPrice" min="0" max="100000" value="0">
+                        <input type="range" id="maxPrice" min="0" max="100000" value="100000">
+                        <div class="range-display">
+                            <span id="minPriceDisplay">₹0</span>
+                            <span id="maxPriceDisplay">₹100,000</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <h4>Categories</h4>
+                    <div class="checkbox-group">
+                        <label><input type="checkbox" value="groceries" checked> Groceries</label>
+                        <label><input type="checkbox" value="electronics" checked> Electronics</label>
+                        <label><input type="checkbox" value="fashion" checked> Fashion</label>
+                        <label><input type="checkbox" value="home" checked> Home & Kitchen</label>
+                    </div>
+                </div>
+                
+                <div class="filter-section">
+                    <h4>Platforms</h4>
+                    <div class="platform-filter">
+                        <label><input type="checkbox" value="zepto" checked> Zepto</label>
+                        <label><input type="checkbox" value="blinkit" checked> Blinkit</label>
+                        <label><input type="checkbox" value="amazon" checked> Amazon</label>
+                        <label><input type="checkbox" value="flipkart" checked> Flipkart</label>
+                    </div>
+                </div>
+                
+                <div class="filter-actions">
+                    <button class="btn-reset">Reset</button>
+                    <button class="btn-apply">Apply Filters</button>
+                </div>
+            </div>
+            
+            <div class="products-container" id="productsContainer">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+            
+            <div class="load-more">
+                <button class="btn-load-more">Load More Products</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Features Showcase -->
+    <section class="premium-showcase">
+        <div class="container">
+            <div class="premium-content">
+                <div class="premium-text">
+                    <div class="premium-badge">Premium Features</div>
+                    <h2>Unlock Advanced Shopping Intelligence</h2>
+                    <p>Get access to exclusive features that help you save more money and time</p>
+                    
+                    <div class="premium-features-list">
+                        <div class="premium-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Smart Price Predictions</h4>
+                                <p>AI predicts future price trends</p>
+                            </div>
+                        </div>
+                        <div class="premium-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Exclusive Deals</h4>
+                                <p>Access to premium-only discounts</p>
+                            </div>
+                        </div>
+                        <div class="premium-feature">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Priority Support</h4>
+                                <p>24/7 dedicated customer support</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="premium-cta">
+                        <button class="btn-premium">
+                            <span>Try Premium Free</span>
+                            <i class="fas fa-crown"></i>
+                        </button>
+                        <span class="trial-text">14-day free trial</span>
+                    </div>
+                </div>
+                
+                <div class="premium-visual">
+                    <div class="dashboard-preview">
+                        <div class="preview-header">
+                            <div class="preview-tabs">
+                                <span class="tab active">Dashboard</span>
+                                <span class="tab">Analytics</span>
+                                <span class="tab">Alerts</span>
+                            </div>
+                        </div>
+                        <div class="preview-content">
+                            <div class="chart-placeholder">
+                                <div class="chart-lines">
+                                    <div class="chart-line"></div>
+                                    <div class="chart-line"></div>
+                                    <div class="chart-line"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter & Footer -->
+    <section class="newsletter-section">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <h3>Never Miss a Deal</h3>
+                    <p>Get the best deals and price drops delivered to your inbox</p>
+                </div>
+                <div class="newsletter-form">
+                    <div class="input-group">
+                        <i class="fas fa-envelope"></i>
+                        <input type="email" placeholder="Enter your email">
+                        <button class="btn-subscribe">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="advanced-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo">
+                            <div class="logo-icon">
+                                <i class="fas fa-search-dollar"></i>
+                            </div>
+                            <div class="logo-text">
+                                <span class="brand-name">Sasta</span>
+                                <span class="brand-finder">Finder</span>
+                            </div>
+                        </div>
+                    </div>
+                    <p>The ultimate price comparison platform for smart shoppers. Find the best deals across all major platforms!</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">How it Works</a></li>
+                        <li><a href="#">Price Alerts</a></li>
+                        <li><a href="#">Cashback Offers</a></li>
+                        <li><a href="#">API Access</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Platforms</h4>
+                    <ul>
+                        <li><a href="#">Zepto</a></li>
+                        <li><a href="#">Blinkit</a></li>
+                        <li><a href="#">Amazon</a></li>
+                        <li><a href="#">Flipkart</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2024 Sasta Finder. All rights reserved.</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Modal -->
+    <div class="product-modal" id="productModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="modal-body" id="modalBody">
+                <!-- Modal content will be loaded here -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Notification Toast -->
+    <div class="notification-toast" id="notificationToast">
+        <div class="toast-icon">
+            <i class="fas fa-check-circle"></i>
+        </div>
+        <div class="toast-content">
+            <div class="toast-title">Success!</div>
+            <div class="toast-message">Price alert has been set successfully</div>
+        </div>
+        <button class="toast-close">
+            <i class="fas fa-times"></i>
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
